@@ -8,10 +8,11 @@ public 	class Teacher extends AbstractPerson implements Comparable{
 		return TeacherID.toString();
 	}
 	
-	
 	@Override
 	public int compareTo(Object arg0) {
-		// TODO Auto-generated method stub
+		//if (this.TeacherID > arg0.TeacherID){
+			
+		//}
 		return 0;
 	}
 	

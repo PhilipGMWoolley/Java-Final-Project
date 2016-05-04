@@ -19,8 +19,13 @@ public class Course implements Comparable{
 		return 0;
 	}
 	
+	public void AddStudent(Student s){
+		roster.add(s);
+	}
 	
-	
+	public void RemoveStudent(Student s){
+		roster.remove(s);
+	}
 	
 	
 	

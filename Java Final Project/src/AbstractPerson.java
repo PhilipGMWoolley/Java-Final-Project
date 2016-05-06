@@ -21,6 +21,7 @@ public abstract class AbstractPerson {
 		return 0;
 		}
 	}
+
 }
 
 

@@ -1,6 +1,6 @@
 import java.util.UUID;
 
-public 	class Student extends AbstractPerson implements Comparable{
+public 	class Student extends AbstractPerson implements Comparable<Student>{
 	UUID StudentID;
 	
 	@Override
@@ -10,9 +10,16 @@ public 	class Student extends AbstractPerson implements Comparable{
 	
 	
 	@Override
-	public int compareTo(Object arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Student arg0) {
+		if(lastname.charAt(0) > arg0.lastname.charAt(0)){
+			return 1;
+		}
+		else if(lastname.charAt(0) < arg0.lastname.charAt(0)){
+			return -1;
+		}
+		else{
+			return 0;
+		}
 	}
 	
 }

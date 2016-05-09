@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
@@ -6,8 +7,8 @@ import javax.swing.JOptionPane;
 
 public class Driver {
 	int List_Positioner = 0;
-	public static List<AbstractPerson> PERSON_LIST;
-	public static List<Course> CLASS_LIST;
+	public static List<AbstractPerson> PERSON_LIST= new ArrayList<AbstractPerson>();
+	public static List<Course> CLASS_LIST= new ArrayList<Course>();
 
 	public static AbstractPerson isIn(List<AbstractPerson> l, String ln){
 		AbstractPerson f = null;

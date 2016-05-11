@@ -1,14 +1,18 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
 import javax.swing.JOptionPane;
 
-public class Driver {
+public class Driver{
+	
 	int List_Positioner = 0;
-	public static List<AbstractPerson> PERSON_LIST= new ArrayList<AbstractPerson>();
+	public static  List<AbstractPerson> PERSON_LIST= new ArrayList<AbstractPerson>();
 	public static List<Course> CLASS_LIST= new ArrayList<Course>();
+	//public static List<Object> PERSON_LIST = new ArrayList<Object>();
 
 	public static AbstractPerson isIn(List<AbstractPerson> l, String ln){
 		AbstractPerson f = null;
@@ -49,6 +53,10 @@ public class Driver {
 		s.firstname = f;
 		s.lastname = l;
 		s.StudentID = UUID.randomUUID();
+		PERSON_LIST.add(s);
+		Collections.sort(PERSON_LIST);
+		System.out.println(PERSON_LIST);
+		main(null);
 		return s;
 	}
 	
@@ -69,6 +77,9 @@ public class Driver {
 		c.courseID = UUID.randomUUID();
 		
 		CLASS_LIST.add(c);
+		Collections.sort(CLASS_LIST);
+		System.out.println(CLASS_LIST);
+		main(null);
 		return c;
 	}
 	
@@ -93,7 +104,9 @@ public class Driver {
 		
 		
 		PERSON_LIST.add(t);
-		
+		Collections.sort(PERSON_LIST);
+		System.out.println(PERSON_LIST);
+		main(null);
 		return t;
 	}
 	
@@ -169,5 +182,6 @@ public class Driver {
 
 		}
 	}
+
 
 }

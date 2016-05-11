@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,6 +29,7 @@ public class Course implements Comparable<Course>{
 	
 	public void AddStudent(Student s){
 		roster.add(s);
+		Collections.sort(roster);
 	}
 	
 	public void RemoveStudent(Student s){
